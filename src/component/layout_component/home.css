@@ -1,0 +1,13 @@
+.div-home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+@media only screen and (min-width: 700px){
+    .div-continer{
+        width: 1120px;
+        
+    }
+}
+

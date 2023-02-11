@@ -1,0 +1,18 @@
+h1{
+    font-weight: 900;
+    
+    margin: 5px 0px 10px 10px;
+    
+}
+
+h6{
+    margin: 30px 0px;
+    line-height: 160%;
+    color: rgb(168, 172, 175);
+    
+}
+
+span{
+    margin:10px 4px;
+    color: rgb(134, 138, 138);
+}
