@@ -1,0 +1,33 @@
+.car-home{
+    width: 100%;
+    height:66vh;
+    background-color: #fccf3a;
+    background-image: url('../../../image/home/image2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+    box-sizing: border-box;
+     display: flex;
+
+
+    justify-content: center;
+    animation: car-background 25s ease-in-out infinite;
+}
+
+.con-carhom{
+    height:90vh;
+   
+    
+}
+
+.con-carhom img{
+    position: absolute;
+    top: 52vh;
+    
+  
+}
+
+
+    

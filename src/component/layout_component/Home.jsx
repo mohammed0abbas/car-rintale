@@ -6,6 +6,8 @@ import Section_contact from './home/section_contact/Section_contact'
 import SectionCard from './home/sectioncard/SectionCard'
 import Loader from '../../loader/Loader'
 import { useState } from 'react'
+import Homecar from './homecar/Homecar'
+
 export default function Home() {
     const [load,setload] = useState(true)
 
@@ -16,13 +18,16 @@ export default function Home() {
         
     },[])
 
-    return (
+    return (<>
+    <Homecar/>
         <div className="div-home">
               {
                     load ? <Loader/> :  <div className="div-continer">
                 
-              
-                <Section_About/>
+
+                
+               
+                {/* <Section_About/> */}
                 <SectionCard/>
                 <Section_Advertising/>
                 <Section_contact/>
@@ -32,5 +37,5 @@ export default function Home() {
                 }
            
         </div>
-    )
+        </>)
 }
