@@ -7,50 +7,14 @@ import Btn from '../../Btn';
 import img from '../../../../img/test2.jpg'
 import './sectioncard.css'
 import Serch from '../../prodect/Serch';
-
+import { fakejson } from '../../../../fakejson'
 
 
 export default function SectionCard() {
 
 
 
-    const [items, setitem] = useState([
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        }, {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-    ])
+    const [items, setitem] = useState(fakejson)
 
 
 
@@ -101,11 +65,7 @@ export default function SectionCard() {
                         items.map((index) =>
                             <div key={index.id} className="col-xl-4  d-flex justify-content-center p-0 m-0 col-lg-4 col-sm-6 col-12 mt-4 ">
                                 <Card
-                                    id={index.id}
-                                    price={index.price}
-                                    titele={index.name}
-                                    img={index.image}
-
+                                    data={index}
                                 />
                             </div>)
                     }
