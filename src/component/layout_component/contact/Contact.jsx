@@ -106,7 +106,7 @@ export default function Contact() {
                                 <a href='mailto:mohammedapas07@gmail.com' style={{ 'textDecoration': 'none' }}>
                                     <div className='d-flex m-1'>
                                         <img src={icon1} alt="" width={20} />
-                                        <p className='m-0 p-0'>contact@taza.com</p>
+                                        <p className='m-0 p-0'>contact@UnaryCar.com</p>
                                     </div>
                                 </a>
 
@@ -121,7 +121,7 @@ export default function Contact() {
                                 <a href='https://instagram.com/m__cel' style={{ 'textDecoration': 'none' }}>
                                     <div className='d-flex m-1'>
                                         <img src={icon2} alt="" width={20} />
-                                        <p className='m-0 p-0'>taza taza</p>
+                                        <p className='m-0 p-0'>UnaryCar</p>
                                     </div>
                                 </a>
 
@@ -129,7 +129,7 @@ export default function Contact() {
                                 <a href="https://instagram.com/m__cel" style={{'textDecoration': 'none'}} >
                                     <div className='d-flex'>
                                         <img src={icon3} alt="" width={20} />
-                                        <p className='m-0 p-0 '>taza taza</p>
+                                        <p className='m-0 p-0 '>UnaryCar</p>
                                     </div>
                                 </a>
 
@@ -137,7 +137,7 @@ export default function Contact() {
                                 <a href="https://instagram.com/m__cel" style={{'textDecoration': 'none'}}>
                                     <div className='d-flex'>
                                         <img src={icon4} alt="" width={20} />
-                                        <p className='m-0 p-0'>taza taza</p>
+                                        <p className='m-0 p-0'>UnaryCar</p>
                                     </div>
                                 </a>
 

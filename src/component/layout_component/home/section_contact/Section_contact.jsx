@@ -35,7 +35,7 @@ export default function Section_contact() {
                             id='2'
                             name='البريد الالكتروني '
                             img1={phonicon}
-                            contact1="contact@taza.com"
+                            contact1="contact@UnaryCar.com"
                             link='mail:mohamedapas07@gmail.com'
                            
 
@@ -45,11 +45,11 @@ export default function Section_contact() {
                         id ='3'
                             name='التواصل الاجتماعي '
                             img1={faceicon}
-                            contact1="taza taza"
+                            contact1="UnaryCar"
                             img2={insticon}
-                            contact2="taza taza"
+                            contact2="UnaryCar"
                             img3={tweticon}
-                            contact3="taza taza"
+                            contact3="UnaryCar"
                             link="https://instagram.com/m__cel"
 
                         />
