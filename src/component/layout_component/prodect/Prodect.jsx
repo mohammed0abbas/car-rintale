@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import API from '../../../API';
-import Loader from '../../../loader/Loader';
 import Card from '../card/Card';
-import Btn from '../Btn';
-import img from '../../../img/test2.jpg'
-import SectionCard from '../home/sectioncard/SectionCard';
 import Serch from './Serch';
 import '../home/sectioncard/sectioncard.css'
-import { fakejson } from '../../../fakejson'
 
 
 
@@ -15,22 +10,42 @@ import { fakejson } from '../../../fakejson'
 
 export default function Prodect() {
 
-    const [items, setitems] = useState(fakejson)
-    const [load, setload] = useState(true)
-
-    // useEffect(() => {
-
-    //     API.get(`/api/products/list`)
-    //         .then(res => {
-    //             const item = res.data;
-    //             setitems(item);
-    //             setload(false)
-
-    //         })
-    //         .catch(err => {
-    //             console.log(err)
-    //         })
-    // }, [])
+    const [items, setitems] = useState([]);
+    const [search, setsearch] = useState({
+      brand: "",
+      model: "",
+    });
+    useEffect(() => {
+      API.get(`/Car/Get?brand=${search.brand}&model=${search.model}`)
+        .then((res) => {
+          const item = res.data.data;
+          setitems(item);
+          console.log(item);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+        
+    }, [search]);
+  
+    function handleModel(e) {
+      const value = e.target.value;
+      setsearch((srch) => {
+        return {
+          ...srch,
+          "model" : value,
+        };
+      });
+    }
+    function handleBrand(e) {
+          const value = e.target.value;
+          setsearch((srch) => {
+              return {
+                  ...srch,
+                 "brand": value,
+              };
+          });
+      }
 
 
 
@@ -49,7 +64,7 @@ export default function Prodect() {
                 // load ? <Loader /> : 
 
                 <section className='section-card container p-0  m-md-5'>
-                    <Serch />
+                    <Serch hndlModel={handleModel} hndlBrand={handleBrand}/>
                     <div className='' style={{
                         "width": '100%',
                         "display": 'flex',

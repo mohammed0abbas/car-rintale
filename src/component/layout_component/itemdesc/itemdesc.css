@@ -16,3 +16,8 @@ span{
     margin:10px 4px;
     color: rgb(134, 138, 138);
 }
+hr{
+    margin: 1.1em auto;
+    width: 100%;
+    border: 1.3px solid rgb(0, 0, 0);
+}

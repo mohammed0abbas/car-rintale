@@ -5,6 +5,7 @@ import API from '../../../API'
 import { baseurl } from '../../../baseurl'
 import './itemdesc.css'
 import Loader from '../../../loader/Loader'
+import Btn from '../Btn'
 
 
 export default function ItemDesc() {
@@ -13,25 +14,25 @@ export default function ItemDesc() {
   
   const [item,setitem] = useState({})
   
-  const [load,setload] = useState(true)
+  const [load,setload] = useState(false)
   
 
 
 
 
-//   useEffect(()=>{
+  useEffect(()=>{
 
-//     API.get(`/api/products/product/${id}`)
-//        .then(res => {
-//            const temp = res.data;
-//            setitem(temp);
-//            console.log(temp)
-//            setload(false)
-//        })
-//        .catch(err=>{
-//            console.log(err)
-//        })
-// },[])
+    API.get(`Car/Show?id=${id}`)
+       .then(res => {
+           const temp = res.data.data;
+           setitem(temp);
+           console.log(temp)
+           setload(false)
+       })
+       .catch(err=>{
+           console.log(err)
+       })
+},[])
 
   return (<>
 
@@ -44,25 +45,33 @@ export default function ItemDesc() {
     <div className='continer d-flex justify-content-center text-end mt-5 mb-5'>
 
 
-      <section className='col-7 d-flex flex-column flex-lg-row justify-content-between'>
+      <section className='col-8 d-flex flex-column flex-lg-row justify-content-between'>
 
       
 
           <div className='col-12 col-lg-6 text-center text-lg-start'>
 
-            <img src={`${baseurl}/${item.image}`} alt="" width={300}/>
+            <img src={`${item.image}`} alt="" width={600}/>
 
           </div>
 
-          <div className='col-12 col-lg-6 mt-4 mt-lg-0'>
-            <h1>{item.name}</h1>
-            <h6>{item.description}</h6>
-
-            <div >
-              <span>دينار عراقي</span><span>{item.price}</span><span>:السعر </span>
+          <div className='col-12 col-lg-4 mt-4 mt-lg-0 text-center'>
+            <h1 style={{color: '#FAA91C'}}>{item.brand?.name} {item.model?.name}</h1>
+            <hr  />
+            <div className='d-flex justify-content-between '>
+              <span >Brand: {item.brand?.name}</span><span>Model: {item.model?.name}</span>
+            </div>            
+            <div className='d-flex justify-content-between '>
+              <span>Color: {item.color}</span><span>Max Passenger: {item.maxPassenger}</span>
             </div>
-            <div>
-              <span>g</span> <span>{item.weight}</span><span>: الوزن</span>
+            <div className='d-flex justify-content-between '>
+              <span>Transmission : {item.transmission == 0 ? 'Manual' : 'Auto'}</span><span>Cylinders: V{item.cylinders}</span>
+            </div>
+            <div className='d-flex justify-content-center '>
+              <span>Price: {item.price}$ / D </span>
+            </div>
+            <div className='d-flex m-4 justify-content-center '>
+              <Btn link="#" value="Order Now" ></Btn>
             </div>
           </div>
         

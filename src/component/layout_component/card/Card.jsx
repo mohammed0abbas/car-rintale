@@ -27,11 +27,11 @@ export default function Card(props) {
                 <span className='m-1 span-card'>
                     <span className='d-flex justify-content-around m-0 p-0'>
                     <p >Color: {item.color}</p> 
-                    <p>Passenger: {item.maxPassengers}</p> 
+                    <p>Passenger: {item.maxPassenger}</p> 
                     </span>
                     <span className='d-flex justify-content-around p-0 m-0'>
-                    <p >Price :{item.price}/day</p> 
-                    <p >Transmission:{item.transmission == 0 ? 'Manual' : 'Auto'}</p> 
+                    <p >Price: {item.price}$</p> 
+                    <p >Transmission: {item.transmission == 0 ? 'Manual' : 'Auto'}</p> 
                     </span>
                     
                     
