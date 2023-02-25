@@ -7,6 +7,7 @@ import img from '../../../img/test2.jpg'
 import SectionCard from '../home/sectioncard/SectionCard';
 import Serch from './Serch';
 import '../home/sectioncard/sectioncard.css'
+import { fakejson } from '../../../fakejson'
 
 
 
@@ -14,43 +15,7 @@ import '../home/sectioncard/sectioncard.css'
 
 export default function Prodect() {
 
-    const [items, setitems] = useState([
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        }, {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-        {
-            id: 2,
-            name: 'Ferrari F60 America',
-            price: 'car price',
-            image: img
-        },
-    ])
+    const [items, setitems] = useState(fakejson)
     const [load, setload] = useState(true)
 
     // useEffect(() => {
@@ -104,10 +69,7 @@ export default function Prodect() {
                                 items.map((index) =>
                                     <div key={index.id} className="col-xl-4  d-flex justify-content-center p-0 m-0 col-lg-4 col-sm-6 col-12 mt-4 ">
                                         <Card
-                                            id={index.id}
-                                            price={index.price}
-                                            titele={index.name}
-                                            img={index.image}
+                                            data={index}
 
                                         />
                                     </div>)

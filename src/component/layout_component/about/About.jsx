@@ -1,6 +1,6 @@
 import React from 'react';
 
-import img_about from '../../../img/about_img/about_img.png'
+import img_about from '../../../image/about/Group.png'
 import './about.css'
 
 
@@ -16,23 +16,17 @@ export default function about() {
 
         <section>
             <div className="div-continer1 d-flex flex-column flex-md-row  justify-content-center justify-content-md-between pt-0 text-center text-md-end">
-                <img src={img_about} alt="" width={400} height={550} className='' />
+                <img src={img_about} alt="" width={600}  className='' />
                
-                <div className="div-word pt-5 " dir='rtl'>
-                    <h1 className='color1'>من نحن؟</h1>
-                    <p>شركة محلية مبنية على فكرة شخصية تم
-                        <br /> طرحها في برنامج ينهض النسخة الثالثة
-                        <br /> المقدم بأشراف مؤسسة المحطة وبالشراكة
-                        <br /> مع UNDP و EXPETISE FRANCE
-                    </p>
-
-                    <h4 className='color1 mt-5 mb-2'>ما هي تازة؟</h4>
+                <div className="div-word pt-5 text-center p-4" dir='rtl'>
+                    <h1 className='color1'> About us</h1>
                     <p>
-
-                        شركة تقوم بتنظيف وتغليف الخضار والفواكه
-                        <br />  العراقية وفق شروط صحية وتسويقها
-                        <br />  بطريقة تواكب الحداثة وبأيادي عراقية
+                    UnaryCar is a reliable, affordable and eco-friendly <br/>car rental company  
+                    dedicated to providing<br/> exceptional customer service 
+                     and <br/> a seamless rental experience
                     </p>
+
+                    
 
 
 

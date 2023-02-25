@@ -19,19 +19,19 @@ export default function ItemDesc() {
 
 
 
-  useEffect(()=>{
+//   useEffect(()=>{
 
-    API.get(`/api/products/product/${id}`)
-       .then(res => {
-           const temp = res.data;
-           setitem(temp);
-           console.log(temp)
-           setload(false)
-       })
-       .catch(err=>{
-           console.log(err)
-       })
-},[])
+//     API.get(`/api/products/product/${id}`)
+//        .then(res => {
+//            const temp = res.data;
+//            setitem(temp);
+//            console.log(temp)
+//            setload(false)
+//        })
+//        .catch(err=>{
+//            console.log(err)
+//        })
+// },[])
 
   return (<>
 

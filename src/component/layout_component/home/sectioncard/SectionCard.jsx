@@ -34,14 +34,21 @@ export default function SectionCard() {
     // },[])
 
 
+    const [search, setsearch] = useState({
+        "name": "",
+        "brand": "",
+        "model": "",
+        "price": "",
+    })
 
+  
 
 
 
 
     return <div>
         <section className='section-card container p-0  '>
-            <Serch/>
+            <Serch />
             <div className='' style={{
                 "width": '100%',
                 "display": 'flex',
@@ -62,12 +69,14 @@ export default function SectionCard() {
 
 
                     {
-                        items.map((index) =>
-                            <div key={index.id} className="col-xl-4  d-flex justify-content-center p-0 m-0 col-lg-4 col-sm-6 col-12 mt-4 ">
+                        items.map((index) =>{
+                            
+                            return<div key={index.id} className="col-xl-4  d-flex justify-content-center p-0 m-0 col-lg-4 col-sm-6 col-12 mt-4 ">
                                 <Card
                                     data={index}
                                 />
-                            </div>)
+                            </div>
+ } )
                     }
 
 

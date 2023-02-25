@@ -137,3 +137,25 @@ export const fakejson = [
         "image" : "https://upload.wikimedia.org/wikipedia/commons/2/2f/2019_Chevrolet_Camaro_base%2C_front_11.9.19.jpg"
     }
 ]
+
+
+export const brands = ()=>{
+    return fakejson.map((item)=>{
+        return item.brand;
+    });
+}
+
+export const models = ()=>{
+    return fakejson.map((item)=>{
+        return item.model;
+    });
+}
+
+
+export const prices = ()=>{
+    return fakejson.map((item)=>{
+
+        return item.price;
+    });
+}
+
