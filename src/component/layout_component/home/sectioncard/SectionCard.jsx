@@ -5,6 +5,7 @@ import API from "../../../../API";
 import Btn from "../../Btn";
 import "./sectioncard.css";
 import Serch from "../../prodect/Serch";
+import Companycard from "../companycard/Companycard";
 
 export default function SectionCard() {
   const [items, setitems] = useState([]);
@@ -13,7 +14,7 @@ export default function SectionCard() {
     model: "",
   });
   useEffect(() => {
-    API.get(`/Car/Get?brand=${search.brand}&model=${search.model}`)
+    API.get(`/Company/getCompanies`)
       .then((res) => {
         const item = res.data.data;
         setitems(item);
@@ -47,22 +48,21 @@ export default function SectionCard() {
   return (
     <div>
       <section className="section-card container p-0  ">
-        <Serch hndlModel={handleModel} hndlBrand={handleBrand} />
+       
         <div
           className=""
           style={{
             width: "100%",
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
             paddingLeft: "20px",
             paddingRight: "20px",
+            marginTop: "20px",
           }}
         >
-          <span>
-            <Btn value=" More" link="/prodect" />
-          </span>
-          <span>
-            <h3>المنتجات</h3>
+          
+          <span className="">
+            <h3>Company</h3>
           </span>
         </div>
 
@@ -74,7 +74,8 @@ export default function SectionCard() {
                   key={index.id}
                   className="col-xl-4  d-flex justify-content-center p-0 m-0 col-lg-4 col-sm-6 col-12 mt-4 "
                 >
-                  <Card data={index} />
+                  
+                 <Companycard  name={index.name} img={index.image} address={index.address} id={index.id}/>
                 </div>
               );
             })}

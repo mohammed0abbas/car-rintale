@@ -13,7 +13,7 @@ export default function Section_contact() {
         <section>
 
             
-                <h1 className='text-center m-5'>اتصل بنا</h1>
+                <h1 className='text-center m-5'>Contact Us</h1>
             
             
                 <div className="div-contact-link" >
@@ -21,7 +21,7 @@ export default function Section_contact() {
                     <ContactBox
                      
                             id='1'
-                            name='رقم الهاتف'
+                            name='Phone Number'
                             img1={phonicon}
                             link='tel:+96433801866'
                             contact1="96433801866+"
@@ -33,7 +33,7 @@ export default function Section_contact() {
 
                         <ContactBox
                             id='2'
-                            name='البريد الالكتروني '
+                            name=' Email '
                             img1={phonicon}
                             contact1="contact@UnaryCar.com"
                             link='mail:mohamedapas07@gmail.com'
@@ -43,7 +43,7 @@ export default function Section_contact() {
                         
                         <ContactBox
                         id ='3'
-                            name='التواصل الاجتماعي '
+                            name=' Social Media '
                             img1={faceicon}
                             contact1="UnaryCar"
                             img2={insticon}
@@ -59,7 +59,7 @@ export default function Section_contact() {
                     </div>
                 </div>
                 <div className='d-flex justify-content-center mt-5'>
-                    <Btn value="تواصل معنا" link="/contact" />
+                    <Btn value="Contact Us" link="/contact" />
                 </div>
          
 

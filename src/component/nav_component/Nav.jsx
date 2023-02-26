@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import './nav.css';
+import img from '../../image/logo/5.png';
 
 import { NavLink,Link} from "react-router-dom";
 
@@ -28,7 +29,9 @@ export default function Nav() {
             <nav className=''>
                 <div>
                     
-                 <h1>logo</h1>
+               
+                    <img src={img} alt="" width={220} />
+                 
                  
                 </div>
 
