@@ -3,6 +3,7 @@ import './nav.css';
 import img from '../../image/logo/5.png';
 
 import { NavLink,Link} from "react-router-dom";
+// import LogoutIcon from '@mui/icons-material/Logout';
 
 
 
@@ -41,7 +42,7 @@ export default function Nav() {
                 <NavLink onClick={()=>{setdropdown('close')}} activeclassname="active" to={"/about"} className='m-3 link-nav' >About Us </NavLink> 
                 <NavLink onClick={()=>{setdropdown('close')}} activeclassname="active" to={"/prodect"} className='m-3 link-nav' >Prodect</NavLink>
                 <NavLink onClick={()=>{setdropdown('close')}} activeclassname="active" to={"/contact"} className='m-3 link-nav' > Contact Us</NavLink>
-           
+                
                 </div>
 
                 <div className="medlle-screen" >
@@ -56,6 +57,7 @@ export default function Nav() {
                 <li><NavLink onClick={()=>{setdropdown('close')}} activeclassname="active" to={"/about"} className='m-3 link-nav' >About Us </NavLink> </li>
                 <li><NavLink onClick={()=>{setdropdown('close')}} activeclassname="active" to={"/prodect"} className='m-3 link-nav' >Prodect</NavLink> </li>
                 <li><NavLink onClick={()=>{setdropdown('close')}} activeclassname="active" to={"/contact"} className='m-3 link-nav' > Contact Us</NavLink></li>
+
             </ul>}</div>
             </nav>
 

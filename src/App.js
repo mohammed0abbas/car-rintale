@@ -16,6 +16,7 @@ import Prodect from "./component/layout_component/prodect/Prodect";
 import Login from "./component/Login";
 import Regester from "./component/Register";
 import Prodectcompany from "./component/layout_component/compnyprodect/Prodectcompany";
+// import Form from "./component/formbokkeng/Form";
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
       <Route path="/company/:id" element={<Prodectcompany/>}/>
       <Route path="/contact" element={<Contact/>} />
       <Route path="/item/:id" element={<ItemDesc/>} />
+      {/* <Route path="/form/:id" element={<Form/>} /> */}
+
     
       
     </Routes>

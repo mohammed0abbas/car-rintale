@@ -14,11 +14,17 @@ function Login() {
   const [password, setpassword] = React.useState("");
 
   const handllogin = () => {
-  
-    if(username === "m_cel" || password === "12345678"){
-      localStorage.setItem('token', '123456789')
-      window.location.href = "/"
-    }
+    const data = new FormData();
+    data.append("username", username);
+    data.append("password", password);
+    API.post("/User/login", data)
+      .then((res) => {
+        console.log(res.data);
+        if (!res.data.hasError) {
+          localStorage.setItem("token", res.data.token);
+          window.location.href = "/";
+        }
+      })
   
   
   }
