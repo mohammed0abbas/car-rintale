@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState ,useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import API from '../../../API'
 import { baseurl } from '../../../baseurl'
 import './itemdesc.css'
@@ -71,7 +71,9 @@ export default function ItemDesc() {
               <span>Price: {item.price}$ / D </span>
             </div>
             <div className='d-flex m-4 justify-content-center '>
+              <Link to={`/form/${id}`}>
               <Btn link="#" value="Order Now" ></Btn>
+              </Link>
             </div>
           </div>
         
