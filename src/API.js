@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: `https://restapi.sinnerx9.info/api`
+  baseURL: `https://car-rental-api.unarycode.tech/api`
 });
 
 

@@ -42,7 +42,7 @@ function Login() {
         </div>
         <div className="flex-col">
           <label htmlFor="password">Password</label>
-          <input placeholder="Password"  onChange={e=>{setpassword(e.target.value)}} name="password" className="input" type="text" />
+          <input placeholder="Password"  onChange={e=>{setpassword(e.target.value)}} name="password" className="input" type="password" />
         </div>
         <button className="btn" onClick={handllogin}>Login</button>
         <div className="or">

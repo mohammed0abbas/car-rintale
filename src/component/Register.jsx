@@ -98,8 +98,8 @@ function Register() {
           <input
             placeholder="password"
             name="password"
+            type="password"
             className="input"
-            type="text"
             onChange={(e) => {
               settemp({ ...temp, password: e.target.value });
             }}
